@@ -47,6 +47,7 @@ set smartcase
 
 set noshowmode
 
+set signcolumn=number
 
 call plug#begin('~/.config/nvim/plugged')
 
