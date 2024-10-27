@@ -1,33 +1,33 @@
-syntax on           " enables syntax highlighting
-set termguicolors   " better colors
-set smartindent     " enable autoindents     
-set number          " adds line numbers
+filetype indent on      " load filetype-specific indent files
+syntax enable           " enable syntax highlighting
+
+set termguicolors       " better colors
+set smartindent         " enable autoindents     
+set number              " adds line numbers
 " set relativenumber
-set tabstop=4       " number of spaces in a <Tab>
-set softtabstop=4   " number of spaces in a <Tab>
-set expandtab       " number of spaces in a <Tab>
-set shiftwidth=4    " number of spaces used for autoindents
-set numberwidth=4   " columns used for the line number
-set incsearch       " highlights the matched text pattern when searching
+set tabstop=4           " number of spaces in a <Tab>
+set softtabstop=4       " number of spaces in a <Tab>
+set expandtab           " number of spaces in a <Tab>
+set shiftwidth=4        " number of spaces used for autoindents
+set numberwidth=4       " columns used for the line number
+set incsearch           " highlights the matched text pattern when searching
 set nohlsearch
-set splitbelow      " open splits intuitively
+set splitbelow          " open splits intuitively
 set splitright
-set hidden          " navigate buffers without losing unsaved work
-set scrolloff=8     " start scrolling when 8 lines from top or bottom
-set undofile        " save undo history
-set mouse=a         " enable mouse support
-set ignorecase      " case insensitive search unless capital letters are used
+set hidden              " navigate buffers without losing unsaved work
+set scrolloff=8         " start scrolling when 8 lines from top or bottom
+set undofile            " save undo history
+set mouse=a             " enable mouse support
+set ignorecase          " case insensitive search unless capital letters are used
 set smartcase
 set noshowmode
 set signcolumn=number
 
 call plug#begin('~/.config/nvim/plugged')
-
 " color themes
 Plug 'gruvbox-community/gruvbox'
 Plug 'xiantang/darcula-dark.nvim'
 Plug 'nightsense/carbonized'
-
 " tools
 Plug 'romgrk/barbar.nvim'                                           " barbar
 Plug 'nvim-tree/nvim-web-devicons'                                  " optional: for file icons
@@ -43,13 +43,12 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make' }    " optional: 
 Plug 'tpope/vim-fugitive'                                           " vim-fugitive
 Plug 'preservim/nerdcommenter'                                      " nerdcommenter
 Plug 'neovim/nvim-lspconfig'                                        " lsp
-
 " rust
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
-
 call plug#end()
 
+" set colorscheme
 colorscheme darcula-dark
 " colorscheme carbonized-dark
 
