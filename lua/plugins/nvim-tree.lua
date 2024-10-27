@@ -1,3 +1,4 @@
+-- configs
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -23,3 +24,10 @@ require("nvim-tree").setup({
     dotfiles = false,
   },
 })
+
+-- keymaps
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+map('n', '<C-e>', ':NvimTreeOpen<CR>', opts)
+

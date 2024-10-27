@@ -1,2 +1,2 @@
+-- config
 require("ibl").setup()
-

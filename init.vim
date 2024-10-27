@@ -1,4 +1,5 @@
 filetype indent on      " load filetype-specific indent files
+filetype plugin on
 syntax enable           " enable syntax highlighting
 
 set termguicolors       " better colors
@@ -28,35 +29,31 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'xiantang/darcula-dark.nvim'
 Plug 'nightsense/carbonized'
+Plug 'navarasu/onedark.nvim'
+Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
+Plug 'nyoom-engineering/oxocarbon.nvim'
 " tools
 Plug 'romgrk/barbar.nvim'                                           " barbar
-Plug 'nvim-tree/nvim-web-devicons'                                  " optional: for file icons
-Plug 'lewis6991/gitsigns.nvim'                                      " optional: for git status
 Plug 'lewis6991/gitsigns.nvim'                                      " gitsigns
 Plug 'lukas-reineke/indent-blankline.nvim'                          " indent-blankline
 Plug 'itchyny/lightline.vim'                                        " lightline
+Plug 'preservim/nerdcommenter'                                      " nerdcommenter
 Plug 'nvim-tree/nvim-tree.lua'                                      " nvim-tree
+Plug 'nvim-tree/nvim-web-devicons'                                  " for file icons
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }       " treesitter
 Plug 'nvim-telescope/telescope.nvim'                                " telescope
-Plug 'nvim-lua/plenary.nvim'                                        " telescope requires plenary
 Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make' }    " optional: recommended by telescope docs
+Plug 'nvim-lua/plenary.nvim'                                        " telescope requires plenary
 Plug 'tpope/vim-fugitive'                                           " vim-fugitive
-Plug 'preservim/nerdcommenter'                                      " nerdcommenter
 Plug 'neovim/nvim-lspconfig'                                        " lsp
 " rust
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 call plug#end()
 
-" set colorscheme
-colorscheme darcula-dark
-" colorscheme carbonized-dark
-
 " remaps
 let mapleader = ' '
 
-nnoremap <C-p> :Telescope find_files<Cr>
-nnoremap <C-e> :NvimTreeOpen<Cr>
 nnoremap <C-f> :RustFmt<Cr>
 nnoremap <C-p> :RustPlay<Cr>
 nnoremap <C-t> :RustTest<Cr>

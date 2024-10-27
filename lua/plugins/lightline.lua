@@ -1,3 +1,4 @@
+-- config
 vim.g.lightline = {
     active = {
 		left = {
