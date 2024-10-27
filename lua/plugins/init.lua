@@ -1,4 +1,7 @@
-require('plugins/telescope')
-require('plugins/lightline')
+require('plugins/barbar')
 require('plugins/gitsigns')
-
+require('plugins/indent-blankline')
+require('plugins/lightline')
+require('plugins/nvim-tree')
+require('plugins/nvim-treesitter')
+require('plugins/telescope')
